@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bold Highlight</title>
+  </head>
+  <body>
+    <p>
+      This is a <strong>Example</strong> Paragraph with same
+      <strong>important</strong> word.
+    </p>
+    <a href="#" onmouseover="highlight()" onmouseout="return_normal()"
+      >Hover over me</a
+    >
+
+    <script>
+      function highlight() {
+        const strongElements = document.querySelectorAll("strong");
+        strongElements.forEach((element) => {
+          element.style.backgroundColor = "yellow";
+          element.style.color = "red";
+        });
+      }
+      function return_normal() {
+        const StrongElements = document.querySelectorAll("strong");
+        StrongElements.forEach((element1) => {
+          element1.style.backgroundColor = "blue";
+          element1.style.color = "white";
+        });
+      }
+    </script>
+  </body>
+</html>
